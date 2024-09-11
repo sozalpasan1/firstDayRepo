@@ -23,7 +23,6 @@ public class MyFileWriter{
             e.printStackTrace();
         }
 
-
         printFileSize(".dontfindme.txt");
     }
 
