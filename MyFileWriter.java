@@ -23,5 +23,11 @@ public class MyFileWriter{
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        printTotalFileSize(args);
     }
+
+    private static void printTotalFileSize(String... fileNames) {
+        System.out.println("Total size of all files: ...TBD... bytes");
+    } 
 }
