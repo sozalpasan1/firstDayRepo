@@ -31,4 +31,6 @@ public class MyFileWriter{
         File file = new File(fileName);
         System.out.println((double) file.length() / 1024 + "  kb");
     }
+
+    // this is a test comment
 }
