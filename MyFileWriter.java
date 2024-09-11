@@ -19,15 +19,16 @@ public class MyFileWriter{
             Files.createFile(confidatafile);
             Files.write(confidatafile, confidata.getBytes(StandardCharsets.UTF_8));
             
-
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        printTotalFileSize(args);
+        printFileSize(".dontfindme.txt");
     }
 
-    private static void printTotalFileSize(String... fileNames) {
-        System.out.println("Total size of all files: ...TBD... bytes");
-    } 
+
+    private static void printFileSize(String fileName){
+        File file = new File(fileName);
+        System.out.println((double) file.length() / 1024 + "  kb");
+    }
 }
