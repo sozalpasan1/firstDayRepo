@@ -3,6 +3,7 @@ import java.nio.file.*;
 import java.nio.charset.StandardCharsets;
 
 public class MyFileWriter{
+
     public static void main(String[] args) {
         String passwordShush = "if you find this ur sigma";
         String confidata = "confidentialdata";
@@ -24,6 +25,8 @@ public class MyFileWriter{
         }
 
         printFileSize(".dontfindme.txt");
+
+        printTotalFileSize(".dontfindme.txt", ".hideme/confidata.dat");
     }
 
 
@@ -33,4 +36,14 @@ public class MyFileWriter{
     }
 
     // this is a test comment
+        private static void printTotalFileSize(String... fileNames) { 
+        long totalSize = 0;
+        for (String fileName : fileNames) {
+            File file = new File(fileName);
+            if (file.exists()) {
+                totalSize += file.length();
+            }
+        }
+        System.out.println("Total size of all files: " + totalSize + " bytes");
+    }
 }
